@@ -6,7 +6,7 @@ import { FaUserCheck } from "react-icons/fa6";
 const Main = () => {
   return (
     <>
-      <section className="bg-[#F8F9FC] mt-[40px] max-w-[1127px] m-auto flex flex-col-reverse lg:flex-row  lg:my-[90px] ">
+      <section className=" mt-[40px] max-w-[1127px] m-auto flex flex-col-reverse lg:flex-row  lg:my-[90px] ">
         {/* image first div */}
         <div className="">
           <img

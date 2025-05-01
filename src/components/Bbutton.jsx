@@ -1,12 +1,31 @@
-import React from 'react'
+import React from 'react';
+import { Link } from 'react-router-dom';
 
-const Bbutton = ({BgColor,BorderColor,BorderSzie,textColor ,text,margin}) => {
+const Bbutton = ({
+  BgColor,
+  BorderColor,
+  BorderSzie,
+  textColor,
+  text,
+  margin,
+  to, // 👈 added for routing
+}) => {
+  const classes = `w-[300px] ${textColor} ${margin} h-[48px] flex justify-center items-center 
+                   lg:w-[180px] rounded-full ${BgColor} ${BorderSzie} ${BorderColor}`;
+
   return (
-<>
-<div>
-    <button className= {`w-[300px]  ${textColor} ${margin} h-[48px] flex justify-center items-center lg:w-[180px] lg:-[48px] rounded-full ${BgColor} ${BorderSzie} ${BorderColor} `}>{text}</button>
-</div>
-</>  )
-}
+    <>
+      {to ? (
+        <Link to={to}>
+          <button className={classes}>{text}</button>
+        </Link>
+      ) : (
+        <div>
+          <button className={classes}>{text}</button>
+        </div>
+      )}
+    </>
+  );
+};
 
-export default Bbutton
+export default Bbutton;

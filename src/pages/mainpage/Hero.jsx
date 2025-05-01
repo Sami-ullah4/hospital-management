@@ -1,17 +1,17 @@
 import React from "react";
-import image1 from "../assets/homeimage/image1.jpg";
-import image2 from "../assets/homeimage/image2.jpg";
-import image3 from "../assets/homeimage/image3.jpg";
-import image4 from "../assets/homeimage/image4.jpg";
-import image5 from "../assets/homeimage/image5.jpg";
-import image6 from "../assets/homeimage/image6.jpg";
-import image7 from "../assets/homeimage/image7.jpg";
-import image8 from "../assets/homeimage/image8.jpg";
-import image9 from "../assets/homeimage/image9.jpg";
-import image10 from "../assets/homeimage/image10.jpg";
-import image11 from "../assets/homeimage/image11.jpg";
-import image12 from "../assets/homeimage/image12.jpg";
-import cardCompuny from "../assets/homeimage/cardCompuny.png";
+import image1 from "../../assets/homeimage/image1.jpg";
+import image2 from "../../assets/homeimage/image2.jpg";
+import image3 from "../../assets/homeimage/image3.jpg";
+import image4 from "../../assets/homeimage/image4.jpg";
+import image5 from "../../assets/homeimage/image5.jpg";
+import image6 from "../../assets/homeimage/image6.jpg";
+import image7 from "../../assets/homeimage/image7.jpg";
+import image8 from "../../assets/homeimage/image8.jpg";
+import image9 from "../../assets/homeimage/image9.jpg";
+import image10 from "../../assets/homeimage/image10.jpg";
+import image11 from "../../assets/homeimage/image11.jpg";
+import image12 from "../../assets/homeimage/image12.jpg";
+import cardCompuny from "../../assets/homeimage/cardCompuny.png";
 import { FiMessageSquare, FiFileText } from "react-icons/fi";
 import { BiLike } from "react-icons/bi";
 import { BsSave } from "react-icons/bs";
@@ -132,7 +132,7 @@ const cardData = () => {
   ];
 };
 
-const Cards = () => {
+const Hero = () => {
   const data = cardData();
   return (
     <>
@@ -203,4 +203,4 @@ const Cards = () => {
   );
 };
 
-export default Cards;
+export default Hero;
