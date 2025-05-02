@@ -9,7 +9,7 @@ const Footer = () => {
       <footer className='bg-red-300'>
         {/* Top Footer Section */}
         <section className="bg-[#132D5E] w-full">
-          <div className="flex flex-col lg:flex-row justify-center lg:justify-between items-center m-auto w-full max-w-[1127px] py-2 px-4">
+          <div className="flex flex-col lg:flex-row justify-center lg:justify-between items-center m-auto w-[85%] py-2 ">
             
             {/* Logo */}
             <div className="bg-[#132D5E] flex justify-center">
@@ -30,7 +30,7 @@ const Footer = () => {
 
         {/* Bottom Footer Section */}
         <section className='bg-[#002A3C]'>
-          <div className="flex flex-col lg:flex-row justify-center lg:justify-between items-center m-auto w-full max-w-[1127px] px-4 text-[#ffffff] py-2">
+          <div className="flex flex-col lg:flex-row justify-center lg:justify-between items-center m-auto w-[85%]  text-[#ffffff] py-2">
             <p>Powered by Ygeian</p>
             <div className='flex gap-5'>
               <FaFacebookF />

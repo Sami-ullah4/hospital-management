@@ -1,7 +1,8 @@
 import React from 'react'
 import Navbar from '../../components/Navbar'
 import Footer from '../../components/Footer'
-import Hero from './Hero'
+import Hero from './components/Hero'
+import Main from './components/Main'
 
 const MainArticalPage = () => {
   return (
@@ -9,6 +10,7 @@ const MainArticalPage = () => {
 <>
 <Navbar/>
 <Hero/>
+<Main/>
 <Footer/>
 </>  )
 }

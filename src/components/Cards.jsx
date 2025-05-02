@@ -136,69 +136,84 @@ const Cards = () => {
   const data = cardData();
   return (
     <>
-     <section className="m-auto max-w-[1200px] px-4 shadowb-b-2xl">
-  <div className="grid grid-cols-1  lg:grid-cols-3 gap-6 justify-center">
-    {data.map((item, index) => (
-      <div
-        key={index}
-        className="flex-col shadow w-full  max-w-[359px] min-h-[444px] bg-[#ffffff] border-[1px] rounded-[16px] border-[#DBE5E9] mx-auto"
-      >
-        {/* inner div new */}
-        <div className="m-2">
-          <div className="flex justify-center items-center">
-            <img
-              src={item.image}
-              alt="Card"
-              className="w-full h-[200px] object-cover rounded-[4px]"
-            />
-          </div>
-          {/* 2inner div */}
-          <div className="p-4">
-            <div className="flex gap-3 items-center">
-              <div>
-                <img
-                  src={item.downImage}
-                  alt="company logo"
-                  className="w-[21px] h-[21px] my-2"
-                />
-              </div>
-              <div className="text-[#375E6C] font-[400] leading-[130%]">
-                {item.componyName}
-              </div>
-            </div>
-            <div className="font-[600] w-full min-h-[90px] leading-[130%] text-[24px] mb-[10px] text-[#002A3C]">
-              {item.text}
-            </div>
-            <div className="text-[#375E6C] text-[14px] mb-[25px]">3h ago</div>
-            {/* card bottom icons */}
-          </div>
-            <div className="flex justify-between items-center mx-4 ">
-              <div className="flex items-center gap-4">
-                <div className="flex items-center text-[#002A3C] gap-[4px] text-[19px]">
-                  {item.message} <h5>0</h5>
-                </div>
-                <div className="flex items-center text-[#002A3C] gap-[4px] text-[19px]">
-                  {item.like} <h5>2</h5>
-                </div>
-              </div>
+      <section className="bg-[#F8F9FC]">
+        <div className="w-[85%] m-auto py-[60px flex flex-col gap-7">
 
-              <div className=" flex gap-4">
-                <div className="flex items-center text-[#002A3C] gap-[4px] text-[19px]">
-                  {item.save} 
-                </div>
-                <div className="flex items-center text-[#002A3C] gap-[4px] text-[19px]">
-                  {item.save} 
-                </div>
-                <div className="flex items-center text-[#002A3C] gap-[4px] text-[19px] mr-[9px]">
-                  {item.save} 
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {data.map((item, index) => (
+              <div
+                key={index}
+                className="flex flex-col bg-white rounded-[16px] border-[1px]  overflow-hidden  border-[#DBE5E9]"
+              >
+                <div className="p-2 space-y-3">
+                  {/* Image Container */}
+                  <div className="relative aspect-video rounded-lg overflow-hidden">
+                    <img
+                      src={item.image}
+                      alt="Card"
+                      className="w-full h-full object-cover absolute inset-0"
+                    />
+                  </div>
+
+                  {/* Content Section */}
+                  <div className="space-y-2">
+                    <div className="flex items-center gap-2">
+                      <img
+                        src={item.downImage}
+                        alt="company logo"
+                        className="w-5 h-5 rounded-full"
+                      />
+                      <span className="text-sm text-[#375E6C] font-medium">
+                        {item.componyName}
+                      </span>
+                    </div>
+
+                    {/* Updated text element with line clamping */}
+                    <h2 className="text-xl font-semibold text-[#002A3C] leading-tight line-clamp-2 overflow-hidden">
+                      {item.text}
+                    </h2>
+
+                    <div className="text-xs text-[#7A929E] font-medium">
+                      3h ago
+                    </div>
+
+                    {/* <FilterButton
+                        label="Psychiatry"
+                        className="px-3 py-1 text-sm bg-[#F0F8FB] text-[#006689] rounded-full"
+                      /> */}
+                  </div>
+
+                  {/* Action Icons */}
+                  <div className="flex justify-between items-center pt-2">
+                    <div className="flex items-center gap-4 text-[#002A3C]">
+                      <button className="flex items-center gap-1 hover:text-[#006689] transition-colors">
+                        {item.message}
+                        <span className="text-sm">0</span>
+                      </button>
+                      <button className="flex items-center gap-1 hover:text-[#006689] transition-colors">
+                        {item.like}
+                        <span className="text-sm">2</span>
+                      </button>
+                    </div>
+
+                    <div className="flex items-center gap-3 text-[#002A3C]">
+                      <button className="p-1.5 hover:bg-[#F0F8FB] rounded-lg transition-colors">
+                        {item.save}
+                      </button>
+                      <button className="p-1.5 hover:bg-[#F0F8FB] rounded-lg transition-colors">
+                        <GoShareAndroid />
+                      </button>
+                      <button className="p-1.5 hover:bg-[#F0F8FB] rounded-lg transition-colors">
+                        {item.file}
+                      </button>
+                    </div>
+                  </div>
                 </div>
               </div>
-            </div>
+            ))}
+          </div>
         </div>
-      </div>
-    ))}
-  </div>
-</section>
+      </section>
     </>
   );
 };

@@ -7,9 +7,9 @@ import { Link } from "react-router-dom";
 const Hero = () => {
   return (
     <>
-      <section className="">
-        <div className="flex flex-col justify-center items-center m-auto text-center">
-          <div className=" py-5 lg:py-[120px] ">
+      <section className="bg-[#F8F9FC]">
+        <div className="flex flex-col justify-center items-center m-auto w-[85%] text-center">
+          <div className=" py-[50px]">
             <h1 className="max-w-[20ch] sm:max-w-[35ch] md:max-w-none mx-auto font-[600px] text-[40px] leading-[130%] text-[#002A3C]">
               Stay Ahead
               <br className="lg:hidden" />
@@ -40,7 +40,7 @@ const Hero = () => {
               />
             </div>
           </div>
-          <div className="flex justify-between  gap-4 mt-7 lg:mt-9 xl:w-[1127px] lg:w-[980px] ">
+          <div className="flex justify-between  gap-4 mt-7 lg:mt-9 w-full ">
             <div>
               <Link
                 to="/filter"
@@ -57,7 +57,7 @@ const Hero = () => {
               </button>
             </div>
           </div>
-          <hr className="bg-[#DBE5E9] xl:w-[1127px]  h-[1px] my-4 " />
+          <hr className="bg-[#DBE5E9] w-full h-[1px] my-4 " />
         </div>
       </section>
     </>

@@ -8,7 +8,7 @@ import Footer from '../../components/Footer'
 const Home = () => {
   return (
     <>
-    <div className='bg-[#F8F9FC]'>
+    <div className='bg-[#F8F9FC] '>
     <Navbar/>
     <Hero/>
     <Cards/>

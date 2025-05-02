@@ -1,17 +1,19 @@
-import React from 'react'
-import Navbar from '../../components/Navbar'
-import Footer from '../../components/Footer'
-import Hero from './components/Hero'
-import Text from './components/Text'
+import React from "react";
+import Navbar from "../../components/Navbar";
+import Footer from "../../components/Footer";
+import Main from "./components/Main";
 
 const Article = () => {
   return (
-<>
-<Navbar/>
-<Hero/>
-<Text/>
-<Footer/>
-</>  )
-}
+    <>
+      <section className="bg-[#F8F9FC]">
+        <Navbar />
+        <Main />
 
-export default Article
+        <Footer />
+      </section>
+    </>
+  );
+};
+
+export default Article;
