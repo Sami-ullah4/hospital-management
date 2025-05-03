@@ -1,7 +1,6 @@
 import React from 'react'
 import Navbar from '../../components/Navbar'
 import Footer from '../../components/Footer'
-import Hero from './components/Hero'
 import Main from './components/Main'
 
 const MainArticalPage = () => {
@@ -9,7 +8,6 @@ const MainArticalPage = () => {
 
 <>
 <Navbar/>
-<Hero/>
 <Main/>
 <Footer/>
 </>  )

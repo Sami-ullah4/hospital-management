@@ -3,7 +3,7 @@ import logo from "../assets/logo.jpg";
 import { IoSearchOutline } from "react-icons/io5";
 import { IoMenu } from "react-icons/io5";
 import Button from "./Button";
-
+import { Link } from "react-router-dom";
 const Navbar = () => {
   return (
     <>
@@ -35,8 +35,10 @@ const Navbar = () => {
 
     {/* Signup Buttons - Only on large screens */}
     <div className="hidden lg:flex items-center gap-3">
-      <button className="w-[47px] h-[48px] text-[16px] text-[#002A3C] font-[500] flex justify-center items-center">Log in
+      <Link to="/login">
+      <button className="w-[47px] h-[48px] text-[16px] text-[#002A3C] font-[500] flex justify-center items-center cursor-pointer">Log in
       </button>
+      </Link>
       <Button
         bgColor="bg-[#43B3E5]"
         text="Sign up"

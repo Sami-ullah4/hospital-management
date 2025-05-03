@@ -5,8 +5,10 @@ import { FaXTwitter } from "react-icons/fa6";
 import { FaLinkedin } from "react-icons/fa";
 import { LuCopy } from "react-icons/lu";
 import image1 from "../../../assets/homeimage/image1.jpg";
+import ai from "../../../assets/AI.png"
 import Lastsection from "./Lastsection";
 import star from "../../../assets/stars.png";
+import { RiArrowDropDownLine } from "react-icons/ri";
 
 const Main = () => {
   return (
@@ -113,6 +115,7 @@ const Main = () => {
         </div>
 
         <div className="flex justify-between w-[100%] ">
+          {/* text dev */}
           <div className="">
             <div className=" m-auto lg:m-0 lg:w-[90%]  my-[30px] text-[27px] leading-[130%] text-[#002A3C] font-[600]">
               <h1>The Role of Immunotherapy in Cancer Treatment</h1>
@@ -198,7 +201,7 @@ const Main = () => {
               </p>
             </div>
           </div>
-
+          {/* card div */}
           <div className=" hidden lg:flex  flex-col    w-[320px] h-[562px] border-[1px] rounded-[16px] bg-white border-[#D6E0E4] ">
             <div className="p-6">
               <div className="flex justify-center items-center">
@@ -261,20 +264,24 @@ const Main = () => {
                   <p className="text-[#96A7AD] font-[400] text-[16px] leading-[150%] ">
                     Language:
                   </p>
-                  <input
-                    type="text"
-                    className="w-[100%] h-[46px] border-[1px] bg-white my-2 placeholder:text-[#375E6C] border-[#D6E0E4] placeholder:font-[500] placeholder:text-[16px] placeholder:leading-[100%]"
-                    placeholder="Select language"
-                  />
+                  <div className="relative w-full my-2">
+                    <input
+                      type="text"
+                      className="w-full rounded-[12px] h-[46px] border-[1px] bg-white pr-10 pl-3 placeholder:text-[#375E6C] border-[#D6E0E4] placeholder:font-[500] placeholder:text-[16px] placeholder:leading-[100%]"
+                      placeholder="Select language"
+                    />
+                    <RiArrowDropDownLine className="absolute right-3 top-1/2 transform -translate-y-1/2 text-2sxl text-[#375E6C] pointer-events-none" />
+                  </div>
                 </div>
 
                 {/* i have to workfrom here */}
-                <div className="flex justify-center items-center bg-[#43B3E5] rounded-full h-[40px] text-white">
-                <img src={star} alt="" className="text-[#5a4343] bg-white" />
-                <span className="  w-[214px] h-[26px] font-[600] text-[20px] leading-[130%] text-white">
-                  AI Content Summarizer
-                </span>
-              </div>
+                <button className="flex gap-1 my-4 justify-center w-full items-center bg-[#43B3E5] rounded-full h-[40px] text-white">
+                  <img src={ai} alt="" className="text-[#5a4343]" />
+                  <span className="  w-[214px] h-[26px] font-[600] text-[20px] leading-[130%] text-white">
+                    AI Content Summarizer
+                  </span>
+                </button>
+                <p className="text-[#375E6C] font-[600] text-[12px] leading-[150%]"><strong>Disclaimer:</strong> AI-generated summaries may not capture all details. Always refer to the full article for complete information.</p>
               </div>
             </div>
           </div>
