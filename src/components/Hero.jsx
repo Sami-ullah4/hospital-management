@@ -24,6 +24,7 @@ const Hero = () => {
             </p>
             <div className=" lg:flex lg:gap-6 lg:justify-center mt-5">
               <Bbutton
+              to='/singup'
                 BgColor={"bg-[#132D5E]"}
                 text={"Sign up for Free"}
                 margin={"mt-[42px] lg:mt-8"}

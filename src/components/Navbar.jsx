@@ -11,11 +11,12 @@ const Navbar = () => {
   <div className=" h-[48px] lg:h-[71px] mx-auto flex items-center justify-between px-4">
     {/* Logo */}
     <div className="flex justify-center items-center">
-      <img
+      <Link to="/"><img
         src={logo}
         alt="Logo"
         className="w-[139px] h-[28px] lg:w-[234px] lg:h-[48px]"
-      />
+      /></Link>
+      
     </div>
 
     {/* Mobile Menu Icon */}
@@ -42,6 +43,7 @@ const Navbar = () => {
       <Button
         bgColor="bg-[#43B3E5]"
         text="Sign up"
+        routDirection={'/singup'}
         borderColor="border-[#43B3E5]"
         textColor="text-white"
       />

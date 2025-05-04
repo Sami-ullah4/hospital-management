@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import FilterButton from "./FilterButton";
 import { MdOutlineCancel } from "react-icons/md";
 import { RiArrowDropUpLine } from "react-icons/ri";
-
+import { Link } from "react-router-dom";
 const specialties = [
   "Allergy",
   "Anesthesiology and Pain Management",
@@ -36,20 +36,6 @@ const specialties = [
   "Otolaryngology",
   "Palliative Care",
   "Pathology and Laboratory Medicine",
-  "Pediatrics",
-  "Physical Medicine and Rehabilitation",
-  "Primary Care",
-  "Psychiatry",
-  "Pulmonary Medicine",
-  "Radiation Oncology",
-  "Radiology",
-  "Rheumatology",
-  "Sleep Medicine",
-  "Substance Use and Addiction Medicine",
-  "Surgery",
-  "Trauma",
-  "Urology",
-  "Womens Health",
 ];
 
 const SpecialtyFilterPage = () => {
@@ -65,10 +51,13 @@ const SpecialtyFilterPage = () => {
 
   return (
     <>
-      <section className="bg-[#7A8387] h-[100%] flex items-center justify-center">
+      <section className="bg-[#7A8387] h-full flex items-center justify-center">
         <div className="px-6 pb-6 max-w-screen-xl bg-white w-[80%] rounded-[16px] border-[1px] border-[#D6E0E4]">
           <div className="flex items-center h-9">
-            <MdOutlineCancel className="ml-2 text-xl cursor-pointer" />
+            <Link to="/">
+              {" "}
+              <MdOutlineCancel className="ml-2 text-xl cursor-pointer" />
+            </Link>
             <h2 className="text-[#002A3C] w-[90%] font-[600] text-[16px] leading-[150%] text-center">
               Filter
             </h2>

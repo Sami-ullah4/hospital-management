@@ -11,6 +11,7 @@ import Billing from '../pages/profile/components/Billing';
 import FAQ from '../pages/faq/FAQ';
 import Account from '../pages/profile/components/ProfileCatagories';
 import Login from '../pages/login/Login';
+import Singup from '../pages/singup/Singup';
 
 const Routers = () => {
   return (
@@ -25,6 +26,7 @@ const Routers = () => {
       <Route path='/billing' element={<Billing/>} />
       <Route path='/faq' element={<FAQ/>} />
       <Route path='/login' element={<Login/>} />
+      <Route path='/singup' element={<Singup/>}/>
 
     </Routes>
   );

@@ -17,6 +17,7 @@ const HomeBottom = () => {
         
         <div className="w-full md:w-auto">
           <Bbutton 
+          to='/singup'
             BgColor="bg-[#132D5E] hover:bg-[#1a3f7a] transition-colors duration-200"
             text="Sign Up for Free"
             textColor="text-white"
