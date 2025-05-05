@@ -138,12 +138,11 @@ const Cards = () => {
     <>
       <section className="bg-[#F8F9FC]">
         <div className="w-[85%] m-auto py-[60px flex flex-col gap-7">
-
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {data.map((item, index) => (
               <div
                 key={index}
-                className="flex flex-col bg-white rounded-[16px] border-[1px]  overflow-hidden  border-[#DBE5E9]"
+                className="flex  flex-col bg-white rounded-[16px] border-[1px]  overflow-hidden  border-[#DBE5E9]"
               >
                 <div className="p-2 space-y-3">
                   {/* Image Container */}
@@ -185,11 +184,13 @@ const Cards = () => {
 
                   {/* Action Icons */}
                   <div className="flex justify-between items-center pt-2">
+                    
                     <div className="flex items-center gap-4 text-[#002A3C]">
-                      <button className="flex items-center gap-1 hover:text-[#006689] transition-colors">
-                        {item.message}
+                      <div className="flex w-7 h-7 items-center gap-1 hover:text-[#006689] transition-colors">
+                        <button className="w-5 h-5 text-[#002A3C]">                        {item.message}
+                        </button>
                         <span className="text-sm">0</span>
-                      </button>
+                      </div>
                       <button className="flex items-center gap-1 hover:text-[#006689] transition-colors">
                         {item.like}
                         <span className="text-sm">2</span>

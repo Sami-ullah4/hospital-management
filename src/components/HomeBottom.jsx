@@ -3,7 +3,7 @@ import Bbutton from "./Bbutton";
 
 const HomeBottom = () => {
   return (
-    <section className="flex justify-center items-center flex-col my-16 md:my-24 lg:my-32 px-4">
+    <section className="flex justify-center items-center flex-col my-9 md:my-9 lg:my-32 px-4">
       <div className="flex flex-col justify-center items-center gap-6 md:gap-8 max-w-4xl text-center">
         <h1 className="text-4xl md:text-5xl lg:text-[40px] font-semibold text-[#002A3C] leading-tight md:leading-tight lg:leading-tight">
           Want personalized updates{" "}
