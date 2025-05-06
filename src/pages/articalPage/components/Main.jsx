@@ -4,13 +4,14 @@ import { FaFacebookF } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { FaLinkedin } from "react-icons/fa";
 import { LuCopy } from "react-icons/lu";
-import image1 from "../../../assets/homeimage/image1.jpg";
+
 import ai from "../../../assets/AI.png"
 import Lastsection from "./Lastsection";
 import star from "../../../assets/stars.png";
 import { RiArrowDropDownLine } from "react-icons/ri";
 
-const Main = () => {
+const Main = ({article}) => {
+  console.log(article)
   return (
     <>
       <section className="w-[85%] m-auto py-[55px]">
@@ -25,8 +26,7 @@ const Main = () => {
           </div>
 
           <h1 className="w-[98%]  font-[600] text-[32px] sm:text-[40px] leading-[130%] text-[#002A3C]">
-            New Breakthrough in Cancer <br className="hidden sm:block" />
-            Immunotherapy Treatment
+            {article.text}
           </h1>
 
           <p className="w-[98%]  ">
@@ -53,7 +53,7 @@ const Main = () => {
             </div>
           </div>
           <img
-            src={image1}
+            src={article.image}
             alt=""
             className="w-[95%] m-auto md:w-[100%] h-[60vh] lg:h-[76vh] object-cover rounded-[16px]"
           />
@@ -118,7 +118,7 @@ const Main = () => {
           {/* text dev */}
           <div className="">
             <div className=" m-auto lg:m-0 lg:w-[90%]  my-[30px] text-[27px] leading-[130%] text-[#002A3C] font-[600]">
-              <h1>The Role of Immunotherapy in Cancer Treatment</h1>
+              <h1>{article.heading1 || "the heading is not featching from data"}</h1>
               <p className=" my-[20px] font-[400] text-[18px] leading-[170%] text-[#375E6C]">
                 Immunotherapy works by stimulating the body’s immune system to
                 recognize and destroy cancer cells. Unlike chemotherapy, which

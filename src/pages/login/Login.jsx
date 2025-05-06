@@ -6,7 +6,7 @@ import gradient from "./components/gradient.png";
 import google from "./components/google.png";
 import link from "./components/link.png";
 import eye from "./components/eye.png";
-
+import {Link} from 'react-router-dom'
 const Login = () => {
   return (
     <>
@@ -48,6 +48,7 @@ const Login = () => {
               <p className="font-[400] text-[16px] leading-[150%] text-[#375E6C] text-center hidden lg:block">
                 or with email
               </p>
+              
             </div>
 
             {/* Divider for mobile */}
@@ -81,9 +82,11 @@ const Login = () => {
                   />
                 </div>
                 <div className="flex justify-center lg:justify-end w-full">
+                <Link to='/resetPassword'>
                   <p className="font-[600] text-[14px] leading-[150%] text-[#43B3E5] hover:underline cursor-pointer">
                     Forgot your password?
                   </p>
+                  </Link>
                 </div>
               </div>
 

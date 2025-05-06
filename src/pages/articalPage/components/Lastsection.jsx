@@ -1,49 +1,10 @@
 import React from "react";
-import image1 from "../../../assets/homeimage/image1.jpg";
-import image2 from "../../../assets/homeimage/image2.jpg";
-import image3 from "../../../assets/homeimage/image3.jpg";
-import cardCompuny from "../../../assets/homeimage/cardCompuny.png";
-import { FiMessageSquare, FiFileText } from "react-icons/fi";
-import { BiLike } from "react-icons/bi";
-import { BsSave } from "react-icons/bs";
-import { GoShareAndroid } from "react-icons/go";
 import FilterButton from "../../filterpage/components/FilterButton";
+import { cardData } from '../../../components/dummyData';
 
-const cardData = () => {
-  return [
-    {
-      image: image1,
-      downImage: cardCompuny,
-      text: "FDA Approves New Vaccine for Respiratory Illness in Children",
-      message: <FiMessageSquare />,
-      like: <BiLike />,
-      save: <BsSave />,
-      componyName: "Medscape",
-      share: <GoShareAndroid />,
-      file: <FiFileText />,
-    },
-    {
-      image: image2,
-      downImage: cardCompuny,
-      text: "Understanding the Role of Genetics in Heart Disease ",
-      message: <FiMessageSquare />,
-      like: <BiLike />,
-      save: <BsSave />,
-      componyName: "Medscape",
-    },
-    {
-      image: image3,
-      downImage: cardCompuny,
-      text: "New Guidelines for Hypertension Treatment in Older Adults",
-      message: <FiMessageSquare />,
-      like: <BiLike />,
-      save: <BsSave />,
-      componyName: "Medscape",
-    },
-  ];
-};
+
 const Lastsection = () => {
-  const data = cardData();
+  const data = cardData;
   return (
     <>
       <section className="bg-[#E9EBF1]">
@@ -53,7 +14,7 @@ const Lastsection = () => {
             </h1>
             
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-              {data.map((item, index) => (
+              {data.slice(0,3).map((item, index) => (
                 <div
                   key={index}
                   className="flex flex-col bg-white rounded-2xl overflow-hidden border border-[#DBE5E9]"
@@ -114,7 +75,7 @@ const Lastsection = () => {
                           {item.save}
                         </button>
                         <button className="p-1.5 hover:bg-[#F0F8FB] rounded-lg transition-colors">
-                          <GoShareAndroid />
+                          {item.share}
                         </button>
                         <button className="p-1.5 hover:bg-[#F0F8FB] rounded-lg transition-colors">
                           {item.file}
