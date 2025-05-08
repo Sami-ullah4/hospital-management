@@ -1,19 +1,11 @@
 import React from "react";
-import ProfileNav from "./ProfileNav";
-import ProfileCatagories from "./ProfileCatagories";
+// import ProfileCatagories from "./ProfileCatagories";
 import tick from "./icons/tick.png";
 
 const Billing = () => {
   return (
     <>
-      <ProfileNav />
-      <div className="flex flex-col lg:flex-row m-auto">
-        {/* Categories sidebar */}
-        <div>
-          <ProfileCatagories />
-        </div>
 
-        {/* Main content */}
         <div className="flex flex-col gap-7 w-full lg:w-[70%] lg:m-auto p-1 my-1">
           <h1 className="font-[600] text-[32px] leading-[130%] text-[#002A3C]">
             Get full access to all features
@@ -116,7 +108,6 @@ const Billing = () => {
             </div>
           </div>
         </div>
-      </div>
     </>
   );
 };

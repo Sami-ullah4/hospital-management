@@ -1,8 +1,6 @@
 import React, { useState } from "react";
-import ProfileCatagories from "./ProfileCatagories";
 import FilterButton from "../../filterpage/components/FilterButton";
 import { RiArrowDropUpLine } from "react-icons/ri";
-import ProfileNav from "../components/ProfileNav";
 const specialties = [
   "Allergy",
   "Anesthesiology and Pain Management",
@@ -49,12 +47,7 @@ const Specialties = () => {
   };
   return (
     <>
-      <ProfileNav />
-      <div className="flex flex-col lg:flex-row m-auto">
-        <div>
-          <ProfileCatagories />
-        </div>
-        {/* i have to change this content in every component */}
+
         <div className=" flex flex-col  gap-7 w-full lg:w-[70%] lg:m-auto p-5">
           {/*  */}
           <div>
@@ -116,7 +109,6 @@ const Specialties = () => {
             </div>
           </div>
         </div>
-      </div>
     </>
   );
 };

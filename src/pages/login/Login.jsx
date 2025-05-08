@@ -1,6 +1,5 @@
 import React from "react";
-import Navbar from "../../components/Navbar";
-import Footer from "../../components/Footer";
+
 import cover from "./components/cover.png";
 import gradient from "./components/gradient.png";
 import google from "./components/google.png";
@@ -10,7 +9,6 @@ import {Link} from 'react-router-dom'
 const Login = () => {
   return (
     <>
-      <Navbar />
       <section className="flex w-[100%]">
         {/* first div */}
         <div className="flex my-4 flex-col justify-center items-center w-full gap-3 ">
@@ -135,7 +133,6 @@ const Login = () => {
       {/*  */}
       {/*  */}
 
-      <Footer />
     </>
   );
 };

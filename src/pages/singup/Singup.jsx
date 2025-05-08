@@ -1,5 +1,4 @@
 import React from "react";
-import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 import divImage from './components/divImage.jpg'
 import gradient from "./components/gradient.png";
@@ -10,7 +9,6 @@ import eye from "./components/eye.png";
 const Singup = () => {
   return (
     <>
-      <Navbar />
       <section className="flex w-[100%]">
         {/* first div */}
         <div className="flex mb-3 flex-col justify-center items-center w-full gap-3 ">

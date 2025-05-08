@@ -97,7 +97,7 @@ const Navbar = () => {
                     </p>
                   </div>
 
-                  <Link to="/profileAccount">
+                  <Link to="/profile-settings">
                     <button className="cursor-pointer bg-[#E5F5FF] text-[#002A3C] font-[400] text-[12px] leading-[130%] w-full p-2 rounded-full">
                       My profile
                     </button>
@@ -106,7 +106,7 @@ const Navbar = () => {
                   <hr className="bg-[#D6E0E4]" />
 
                   <div>
-                    <Link to="/savedArticles">
+                    <Link to="/profile-settings/savedArticles">
                       <div className="flex items-center">
                         <CiSaveDown2 className="text-[#002A3C] text-[20px]" />
                         <h1 className="font-[400] px-2 text-[12px] text-[#002A3C]">

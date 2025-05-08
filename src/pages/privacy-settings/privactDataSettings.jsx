@@ -1,13 +1,9 @@
 import React from 'react'
-import Navbar from '../../components/Navbar'
-import SettingCatagories from './SettingCatagories'
 
-const DataSettings = () => {
+const privactDataSettings = () => {
   return (
     <>
-    <Navbar />
-    <div className="flex flex-col lg:flex-row m-auto">
-      <SettingCatagories />
+    
       <div className="flex flex-col gap-[45px] w-full lg:w-[50%] lg:m-auto p-2 my-4">
         {/* Privacy Settings Content */}
         <div className="flex flex-col gap-1 ">
@@ -94,8 +90,7 @@ const DataSettings = () => {
           </div>
         </section>
       </div>
-    </div>
   </> )
 }
 
-export default DataSettings
+export default privactDataSettings;

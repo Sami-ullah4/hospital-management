@@ -1,9 +1,8 @@
 import React from 'react'
-import Navbar from '../../components/Navbar'
 
 const EmailSet = () => {
   return (
-    <>    <Navbar/>
+    <>
     <section className="flex justify-center items-center min-h-screen bg-white">
       {/* Main container */}
       <div className="bg-[#F8F9FC] max-w-[613px] w-full px-6 py-8 rounded-lg shadow-md">

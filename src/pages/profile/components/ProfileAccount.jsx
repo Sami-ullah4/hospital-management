@@ -1,16 +1,10 @@
 import React from 'react';
-import ProfileNav from './ProfileNav';
-import ProfileCatagories from './ProfileCatagories';
 import profileIcon from './icons/profileIcon.png';
 
 const ProfileAccount = () => {
   return (
     <>
-      <ProfileNav />
-      <div className="flex flex-col lg:flex-row m-auto">
-        <div>
-          <ProfileCatagories />
-        </div>
+      
 
         <div className="flex flex-col  gap-7 w-full lg:w-[70%] lg:m-auto p-5 my-1">
           {/* Profile Info */}
@@ -76,7 +70,6 @@ const ProfileAccount = () => {
           </div>
 
         </div>
-      </div>
     </>
   );
 };

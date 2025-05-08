@@ -1,71 +1,25 @@
 import React from "react";
-import image1 from "../../../assets/homeimage/image1.jpg";
-import image2 from "../../../assets/homeimage/image2.jpg";
-import image3 from "../../../assets/homeimage/image3.jpg";
-import image4 from "../../../assets/homeimage/image4.jpg";
-import cardCompuny from "../../../assets/homeimage/cardCompuny.png";
-import { FiMessageSquare, FiFileText } from "react-icons/fi";
-import { BiLike } from "react-icons/bi";
-import { BsSave } from "react-icons/bs";
+// import image1 from "../../../assets/homeimage/image1.jpg";
+// import image2 from "../../../assets/homeimage/image2.jpg";
+// import image3 from "../../../assets/homeimage/image3.jpg";
+// import image4 from "../../../assets/homeimage/image4.jpg";
+// import cardCompuny from "../../../assets/homeimage/cardCompuny.png";
+// import { FiMessageSquare, FiFileText } from "react-icons/fi";
+// import { BiLike } from "react-icons/bi";
+// import { BsSave } from "react-icons/bs";
 import { GoShareAndroid } from "react-icons/go";
-import ProfileNav from "./ProfileNav";
-import ProfileCatagories from "./ProfileCatagories";
 import FilterButton from "../../filterpage/components/FilterButton";
+import {cardData} from '../../../components/dummyData'
+import { Link } from "react-router-dom";
 
-const cardData = () => {
-  return [
-    {
-      image: image1,
-      downImage: cardCompuny,
-      text: "New Breakthrough in Cancer Immunotherapy Treatment",
-      message: <FiMessageSquare />,
-      like: <BiLike />,
-      save: <BsSave />,
-      componyName: "Medscape",
-      share: <GoShareAndroid />,
-      file: <FiFileText />,
-    },
-    {
-      image: image2,
-      downImage: cardCompuny,
-      text: "Understanding the Role of Genetics in Heart Disease",
-      message: <FiMessageSquare />,
-      like: <BiLike />,
-      save: <BsSave />,
-      componyName: "Medscape",
-    },
-    {
-      image: image3,
-      downImage: cardCompuny,
-      text: "Diabetes Medication Linked to Lower Risk of Stroke",
-      message: <FiMessageSquare />,
-      like: <BiLike />,
-      save: <BsSave />,
-      componyName: "Medscape",
-    },
-    {
-      image: image4,
-      downImage: cardCompuny,
-      text: "How AI is Revolutionizing Diagnostics in Radiology",
-      message: <FiMessageSquare />,
-      like: <BiLike />,
-      save: <BsSave />,
-      componyName: "Medscape",
-    },
-  ];
-};
 const SavedArticle = () => {
-  const data = cardData();
+
+
+  
 
   return (
     <>
-      <ProfileNav />
-      <div className="flex flex-col lg:flex-row m-auto">
-        {/* first div */}
-        <div>
-          <ProfileCatagories />
-        </div>
-        {/* secound div */}
+
         <div className="flex flex-col  gap-7 w-full lg:w-[70%] lg:m-auto p-5 my-1">
           <h1 className="front-[600] text-[32px] leading-[130%] text-[#002A3C]">
             Saved Articles
@@ -73,9 +27,10 @@ const SavedArticle = () => {
           {/*  */}
           <div className="">
             <div className="flex flex-col gap-5">
-              {data.map((item, index) => (
+              {cardData.slice(0,5).map((item ) => (
+                <Link to={`/savedArticles/${item.id}`}>
                 <div
-                  key={index}
+                  key={item.id}
                   className="flex lg:flex-row-reverse flex-col bg-white rounded-[16px] border-[1px]  overflow-hidden  border-[#DBE5E9] lg:max-w-[743px] max-w-[359px] "
                 >
                   {/*  */}
@@ -147,12 +102,11 @@ const SavedArticle = () => {
                       </div>
                     </div>
                   </div>
-                </div>
+                </div></Link>
               ))}
             </div>
           </div>
         </div>
-      </div>
     </>
   );
 };
