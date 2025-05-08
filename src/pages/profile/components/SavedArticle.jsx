@@ -1,12 +1,5 @@
 import React from "react";
-// import image1 from "../../../assets/homeimage/image1.jpg";
-// import image2 from "../../../assets/homeimage/image2.jpg";
-// import image3 from "../../../assets/homeimage/image3.jpg";
-// import image4 from "../../../assets/homeimage/image4.jpg";
-// import cardCompuny from "../../../assets/homeimage/cardCompuny.png";
-// import { FiMessageSquare, FiFileText } from "react-icons/fi";
-// import { BiLike } from "react-icons/bi";
-// import { BsSave } from "react-icons/bs";
+
 import { GoShareAndroid } from "react-icons/go";
 import FilterButton from "../../filterpage/components/FilterButton";
 import {cardData} from '../../../components/dummyData'
@@ -14,6 +7,7 @@ import { Link } from "react-router-dom";
 
 const SavedArticle = () => {
 
+  console.log(cardData)
 
   
 
@@ -28,7 +22,7 @@ const SavedArticle = () => {
           <div className="">
             <div className="flex flex-col gap-5">
               {cardData.slice(0,5).map((item ) => (
-                <Link to={`/savedArticles/${item.id}`}>
+                <Link to={`/article/${item.id}`}>
                 <div
                   key={item.id}
                   className="flex lg:flex-row-reverse flex-col bg-white rounded-[16px] border-[1px]  overflow-hidden  border-[#DBE5E9] lg:max-w-[743px] max-w-[359px] "

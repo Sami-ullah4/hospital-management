@@ -14,6 +14,7 @@ const ProfileSettingsSidebar = () => {
         <li>
           <NavLink
             to="/profile-settings"
+            end
             style={styleLink}
             className={baseClass}
           >

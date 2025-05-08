@@ -34,7 +34,7 @@ const ResetPassowd = () => {
             <div>
                 <Link to='/sent-email'>
               <button className="rounded-full bg-[#132D5E] text-white py-3 px-6 w-full">
-                Send Reset Link
+              Send Reset Link
               </button>
               </Link>
             </div>

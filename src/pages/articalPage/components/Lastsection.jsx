@@ -1,10 +1,10 @@
 import React from "react";
 import FilterButton from "../../filterpage/components/FilterButton";
 import { cardData } from '../../../components/dummyData';
-
+import Cards from "../../../components/Cards";
+const cardScliceData = cardData.slice(0,4)
 
 const Lastsection = () => {
-  const data = cardData;
   return (
     <>
       <section className="bg-[#E9EBF1]">
@@ -14,13 +14,12 @@ const Lastsection = () => {
             </h1>
             
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-              {data.slice(0,3).map((item, index) => (
+              {/* {data.slice(0,3).map((item, index) => (
                 <div
                   key={index}
                   className="flex flex-col bg-white rounded-2xl overflow-hidden border border-[#DBE5E9]"
                 >
                   <div className="p-2 space-y-3">
-                    {/* Image Container */}
                     <div className="relative aspect-video rounded-lg overflow-hidden">
                       <img
                         src={item.image}
@@ -29,7 +28,6 @@ const Lastsection = () => {
                       />
                     </div>
 
-                    {/* Content Section */}
                     <div className="space-y-2">
                       <div className="flex items-center gap-2">
                         <img
@@ -42,7 +40,6 @@ const Lastsection = () => {
                         </span>
                       </div>
 
-                      {/* Updated text element with line clamping */}
                       <h2 className="text-xl font-semibold text-[#002A3C] leading-tight line-clamp-2 overflow-hidden">
                         {item.text}
                       </h2>
@@ -57,7 +54,6 @@ const Lastsection = () => {
                       />
                     </div>
 
-                    {/* Action Icons */}
                     <div className="flex justify-between items-center pt-2">
                       <div className="flex items-center gap-4 text-[#002A3C]">
                         <button className="flex items-center gap-1 hover:text-[#006689] transition-colors">
@@ -84,7 +80,8 @@ const Lastsection = () => {
                     </div>
                   </div>
                 </div>
-              ))}
+              ))} */}
+              <Cards data={cardScliceData}/>
             </div>
         </div>
       </section>

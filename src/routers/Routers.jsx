@@ -4,7 +4,6 @@ import Home from "../pages/home/Home";
 import About from "../pages/about/About";
 import { Article } from "../pages/articalPage/Article.jsx";
 import Filter from "../pages/filterpage/Filter";
-
 import Specialties from "../pages/profile/components/Specialties";
 import Billing from "../pages/profile/components/Billing";
 import Notification from "../pages/profile/components/Notification";
@@ -13,16 +12,14 @@ import SavedArticle from "../pages/profile/components/SavedArticle.jsx";
 import FAQ from "../pages/faq/FAQ";
 import Login from "../pages/login/Login";
 import Singup from "../pages/singup/Singup";
-import SignupSpecialty from "../pages/Signup - choose-specialty/SignupSpecialty";
 import Contact from "../pages/contact/Contact";
-import DataSettings from "../pages/privacy-settings/privactDataSettings.jsx";
-import ResetPassowd from "../pages/reset-pasword/ResetPassowd";
-import EmailSet from "../pages/reset-pasword/EmailSet";
 import Layout from "../components/layout/Layout";
 import ProfileSettings from "../pages/profileSettings/ProfileSettings.jsx";
 import PrivacyIndex from "../pages/privacy-settings/privacyIndex.jsx";
 import PrivacyDataSettings from "../pages/privacy-settings/privactDataSettings.jsx"
 import PrivacySettings from '../pages/privacy-settings/PrivacySettings.jsx'
+import ResetPassowd from "../pages/reset-pasword/ResetPassowd.jsx";
+import EmailSet from "../pages/reset-pasword/EmailSet.jsx";
 export const Routers = createBrowserRouter([
   {
     path: "/",
@@ -36,31 +33,33 @@ export const Routers = createBrowserRouter([
       { path: "/faq", element: <FAQ /> },
       { path: "/login", element: <Login /> },
       { path: "/singup", element: <Singup /> },
+      {path:'/resetPassword' , element : <ResetPassowd/> },
+      {path:'/sent-email' , element: <EmailSet/>},
       {
         path: "/profile-settings",
         element: <ProfileSettings />,
         children: [
           { index: true, element: <ProfileAccount /> },
-          { path: "/profile-settings/specialties", element: <Specialties /> },
+          { path: "specialties", element: <Specialties /> },
           {
-            path: "/profile-settings/savedArticles",
+            path: "savedArticles",
             element: <SavedArticle />,
           },
-          { path: "/profile-settings/billing", element: <Billing /> },
-          { path: "/profile-settings/notification", element: <Notification /> },
+          { path: "billing", element: <Billing /> },
+          { path: "notification", element: <Notification /> },
         ],
       },
-      // {
-      //   path: "/privacy-settings",
-      //   element: <PrivacyIndex />,
-      //   children: [
-      //     { index: true, element: <PrivacySettings /> },
-      //     {
-      //       path: "/privacy/data-settings",
-      //       element: <PrivacyDataSettings />,
-      //     },
-      //   ],
-      // },
+      {
+        path: "/privacy-settings",
+        element: <PrivacyIndex />,
+        children: [
+          { index: true, element: <PrivacySettings /> },
+          {
+            path: "data-settings",
+            element: <PrivacyDataSettings />,
+          },
+        ],
+      },
     ],
   },
 ]);

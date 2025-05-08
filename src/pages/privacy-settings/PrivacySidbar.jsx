@@ -1,31 +1,41 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React from "react";
+import { NavLink } from "react-router-dom";
 
 const PrivacySidbar = () => {
+  const baseClass =
+    "font-[400] text-[18px] leading-[150%] text-[#002A3C] whitespace-nowrap";
+
+  // const styleLink = ({ isActive }) => ({
+  //   color: isActive ? "text-[#007A3C]" : "text-[#002A3C]",
+  // });
   return (
     <div className="overflow-hidden px-5">
-    <ul className="list-none flex lg:flex-col gap-4 lg:gap-0">
-      <li>
-        <Link
-          to="/privacy-settings"
-          className="font-[400] text-[18px] leading-[150%] text-[#002A3C]"
-        >
-          Privacy Settings
-        </Link>
-      </li>
-      <li>
-        <Link
-          to="/privacy/data-settings"
-          className="font-[400] text-[18px] leading-[150%] text-[#002A3C] whitespace-nowrap"
-        >
-         <span>Data Settings</span>
-        </Link>
-      </li>
-      
-      
-      
-    </ul>
-  </div>  )
-}
+      <ul className="list-none flex lg:flex-col gap-4 lg:gap-0">
+        <li>
+          <NavLink
+            to="/privacy-settings"
+            className={({ isActive }) =>
+             
+              `${baseClass} ${isActive ? "text-[#007A3C]" : "text-[#002A3C]"}`
+            }
+            end
+          >
+            Privacy Settings
+          </NavLink>
+        </li>
+        <li>
+          <NavLink
+            to="/privacy-settings/data-settings"
+            className={({ isActive }) =>
+              `${baseClass} ${isActive ? "text-[#007A3C]" : "text-[#002A3C]"}`
+            }
+          >
+            <span>Data Settings</span>
+          </NavLink>
+        </li>
+      </ul>
+    </div>
+  );
+};
 
 export default PrivacySidbar;

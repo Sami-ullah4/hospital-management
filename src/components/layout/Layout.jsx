@@ -8,13 +8,13 @@ const Layout = () => {
   
 
 
-  const hiddFooter = pathname === '/profile-settings';
+  const hiedFooter = pathname === `/profile-settings`;
 
   return (
     <>
       <Navbar />
       <Outlet />
-      {!hiddFooter && <Footer />}
+      {!hiedFooter && <Footer />}
     </>
   );
 };
