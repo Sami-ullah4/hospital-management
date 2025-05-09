@@ -40,18 +40,18 @@ const specialties = [
 
 const SpecialtyFilterPage = () => {
   const [selected, setSelected] = useState([]);
-  
 
   const handleClick = (label) => {
     // setSelected((prev) => prev.includes(label) ? prev.filter((item) => item !== label) : [...prev, label] );
-setSelected((prev)=> prev.includes(label) ? prev.filter((item)=> item !== label) : [...prev , label]);
+    setSelected((prev) =>
+      prev.includes(label)
+        ? prev.filter((item) => item !== label)
+        : [...prev, label]
+    );
   };
-
-
 
   return (
     <>
-  
       <section className="bg-[#7A8387] h-full flex items-center justify-center">
         <div className="px-6 pb-6 max-w-screen-xl bg-white w-[80%] rounded-[16px] border-[1px] border-[#D6E0E4]">
           <div className="flex items-center h-9">
@@ -99,9 +99,17 @@ setSelected((prev)=> prev.includes(label) ? prev.filter((item)=> item !== label)
               <p className="font-[600] text-[14px] leading-[150%] text-[#96A7AD]">
                 Select news sources:
               </p>
-              {/* seclected buttons */}
-              {selected}
-
+              {/* Selected buttons */}
+              <div className="flex flex-wrap gap-2">
+                {selected.map((spec) => (
+                  <FilterButton
+                    key={spec}
+                    label={spec}
+                    isSelected={true}
+                    onClick={handleClick}
+                  />
+                ))}
+              </div>
             </div>
           </div>
           <hr className=" sm:hidden" />

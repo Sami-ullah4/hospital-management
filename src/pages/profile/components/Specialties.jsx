@@ -45,70 +45,83 @@ const Specialties = () => {
         : [...prev, label]
     );
   };
+  const handleDelet = () => {
+    setSelected([]);
+  };
   return (
     <>
-
-        <div className=" flex flex-col  gap-7 w-full lg:w-[70%] lg:m-auto p-5">
-          {/*  */}
+      <div className=" flex flex-col  gap-7 w-full lg:w-[70%] px-6 lg:px-3 m-auto py-6">
+        {/*  */}
+        <div>
+          <h1 className="font-[600] text-[32px] leading-[130%] text-[#002A3C]">
+            Your Specialties
+          </h1>
+        </div>
+        {/*  */}
+        <div className="flex flex-col gap-7  ">
+          <h1 className="font-[600] text-[24px] leading-[130%] text-[#002A3C]">
+            Selected Specialties
+          </h1>
+          <div className="flex gap-3">
+            {selected.map((space) => (
+              <FilterButton
+                key={space}
+                label={space}
+                isSelected={selected.includes(space)}
+                onClick={handleClick}
+              />
+            ))}
+          </div>
+          {/* div fro salected buttons */}
+          {/* <div className=""></div> */}
+        </div>
+        {/*  */}
+        <div className="flex flex-col gap-5 ">
           <div>
-            <h1 className="font-[600] text-[32px] leading-[130%] text-[#002A3C]">
-              Your Specialties
-            </h1>
-          </div>
-          {/*  */}
-          <div className="flex flex-col gap-7 ">
-            <h1 className="font-[600] text-[24px] leading-[130%] text-[#002A3C]">
-              Selected Specialties
-            </h1>
-            {/* div fro salected buttons */}
-            {/* <div className=""></div> */}
-          </div>
-          {/*  */}
-          <div className="flex flex-col gap-5 ">
-            <div>
-              <h1 className="text-[14px] font-[600] leading-[150%]">
-                Add more
-              </h1>
-              <div className="flex whitespace-nowrap flex-wrap">
-                {specialties.map((spec) => (
-                  <FilterButton
-                    key={spec}
-                    label={spec}
-                    isSelected={selected.includes(spec)}
-                    onClick={handleClick}
-                  />
-                ))}
-              </div>
-              <button className="flex items-center">
-                <RiArrowDropUpLine />
-                <p className="font-[600] text-[16px] leading-[150%] text-[#43B3E5]">
-                  Show more
-                </p>
-              </button>
+            <h1 className="text-[14px] font-[600] leading-[150%]">Add more</h1>
+            <div className="flex whitespace-nowrap flex-wrap">
+              {specialties.map((spec) => (
+                <FilterButton
+                  key={spec}
+                  label={spec}
+                  isSelected={selected.includes(spec)}
+                  onClick={handleClick}
+                />
+              ))}
             </div>
-          </div>
-          {/*  */}
-          <hr
-            className="border-t w-full mb-2"
-            style={{ borderColor: "#D6E0E4" }}
-          />
-          {/*  */}
-          <div className="flex flex-col lg:flex-row-reverse justify-between items-center mb-3">
-            <div className="flex flex-col items-center justify-center lg:flex-row gap-5">
-              <button className="m-auto w-[280px] lg:w-[190px] h-[48px] font-[500] text-[16px] leading-[100%] text-white bg-[#002A3C] rounded-full">
-                Save Preferences
-              </button>
-              <button className="m-auto w-[280px] lg:w-[101px] h-[48px] font-[500] text-[16px] leading-[100%] text-[#43B3E5] border-1 border-[#43B3E5] rounded-full">
-                Reset
-              </button>
-            </div>
-            <div className="flex justify-center items-center">
-              <button className="text-[#FF3535] font-[600] text-[16px] leading-[150%]">
-                Delete all
-              </button>
-            </div>
+            <button className="flex items-center">
+              <RiArrowDropUpLine />
+              <p className="font-[600] text-[16px] leading-[150%] text-[#43B3E5]">
+                Show more
+              </p>
+            </button>
           </div>
         </div>
+        {/*  */}
+        <hr
+          className="border-t w-full mb-2"
+          style={{ borderColor: "#D6E0E4" }}
+        />
+        {/*  */}
+        <div className="flex flex-col lg:flex-row-reverse justify-between items-center mb-3">
+          <div className="flex flex-col items-center justify-center lg:flex-row gap-5">
+            <button className="m-auto w-[280px] lg:w-[190px] h-[48px] font-[500] text-[16px] leading-[100%] text-white bg-[#002A3C] rounded-full">
+              Save Preferences
+            </button>
+            <button className="m-auto w-[280px] lg:w-[101px] h-[48px] font-[500] text-[16px] leading-[100%] text-[#43B3E5] border-1 border-[#43B3E5] rounded-full">
+              Reset
+            </button>
+          </div>
+          <div className="flex justify-center items-center">
+            <button
+              onClick={handleDelet}
+              className="cursor-pointer text-[#FF3535] font-[600] text-[16px] leading-[150%]"
+            >
+              Delete all
+            </button>
+          </div>
+        </div>
+      </div>
     </>
   );
 };

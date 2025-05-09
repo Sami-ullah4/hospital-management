@@ -2,27 +2,21 @@ import React from "react";
 
 import { GoShareAndroid } from "react-icons/go";
 import FilterButton from "../../filterpage/components/FilterButton";
-import {cardData} from '../../../components/dummyData'
+import { cardData } from "../../../components/dummyData";
 import { Link } from "react-router-dom";
 
 const SavedArticle = () => {
-
-  console.log(cardData)
-
-  
-
   return (
     <>
-
-        <div className="flex flex-col  gap-7 w-full lg:w-[70%] lg:m-auto p-5 my-1">
-          <h1 className="front-[600] text-[32px] leading-[130%] text-[#002A3C]">
-            Saved Articles
-          </h1>
-          {/*  */}
-          <div className="">
-            <div className="flex flex-col gap-5">
-              {cardData.slice(0,5).map((item ) => (
-                <Link to={`/article/${item.id}`}>
+      <div className=" flex flex-col  gap-7 w-full lg:w-[70%] px-6 lg:px-3 m-auto py-6">
+      <h1 className="front-[600] text-[32px] leading-[130%] text-[#002A3C]">
+          Saved Articles
+        </h1>
+        {/*  */}
+        <div className="">
+          <div className="flex flex-col gap-5">
+            {cardData.slice(0, 5).map((item) => (
+              <Link to={`/article/${item.id}`}>
                 <div
                   key={item.id}
                   className="flex lg:flex-row-reverse flex-col bg-white rounded-[16px] border-[1px]  overflow-hidden  border-[#DBE5E9] lg:max-w-[743px] max-w-[359px] "
@@ -96,11 +90,12 @@ const SavedArticle = () => {
                       </div>
                     </div>
                   </div>
-                </div></Link>
-              ))}
-            </div>
+                </div>
+              </Link>
+            ))}
           </div>
         </div>
+      </div>
     </>
   );
 };

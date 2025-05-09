@@ -4,7 +4,7 @@ const privactDataSettings = () => {
   return (
     <>
     
-      <div className="flex flex-col gap-[45px] w-full lg:w-[50%] lg:m-auto p-2 my-4">
+      <div className="flex flex-col gap-[45px] w-full lg:w-[50%] lg:m-auto pt-6 my-4">
         {/* Privacy Settings Content */}
         <div className="flex flex-col gap-1 ">
           <h1 className="text-[32px] font-[600] leading-[130%] text-[#002A3C]">

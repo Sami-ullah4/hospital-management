@@ -1,11 +1,10 @@
 import React from "react";
-import Footer from "../../components/Footer";
 import divImage from "./components/divImage.jpg";
 import gradient from "./components/gradient.png";
 import google from "./components/google.png";
 import link from "./components/link.png";
 import eye from "./components/eye.png";
-import {Link} from "react-router-dom"
+import { Link } from "react-router-dom";
 
 const Singup = () => {
   return (
@@ -109,8 +108,7 @@ const Singup = () => {
               <br />
             </span>
             <span className="text-[#43B3E5] hover:underline cursor-pointer">
-              <Link to='/login'> Login now.</Link>
-
+              <Link to="/login"> Login now.</Link>
             </span>
           </p>
         </div>
@@ -119,7 +117,7 @@ const Singup = () => {
           <img
             src={divImage}
             alt="cover image"
-            className="w-full h-full object-cover"
+            className="w-full h-[100vh] object-cover"
           />
           <img
             src={gradient}
@@ -134,8 +132,6 @@ const Singup = () => {
       {/*  */}
       {/*  */}
       {/*  */}
-
-      <Footer />
     </>
   );
 };

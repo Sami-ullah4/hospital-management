@@ -9,7 +9,7 @@ const PrivacySidbar = () => {
   //   color: isActive ? "text-[#007A3C]" : "text-[#002A3C]",
   // });
   return (
-    <div className="overflow-hidden px-5">
+    <div className="overflow-hidden pl-6 pt-6">
       <ul className="list-none flex lg:flex-col gap-4 lg:gap-0">
         <li>
           <NavLink

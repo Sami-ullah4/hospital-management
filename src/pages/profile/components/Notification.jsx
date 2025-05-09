@@ -36,7 +36,7 @@ const Notification = () => {
   return (
     <>
       {/* Main content */}
-      <div className="flex flex-col gap-7 w-full lg:w-[70%] lg:m-auto p-1 my-1">
+      <div className="flex flex-col gap-7 w-full lg:w-[70%] lg:m-auto py-6 my-1">
         <h1 className="font-[600] text-[32px] leading-[130%] text-[#002A3C]">
           Notification Settings
         </h1>
@@ -158,7 +158,7 @@ const Notification = () => {
                 <div className="flex justify-between items-center">
                   <div>
                     <h3 className="font-[600] text-[18px] text-[#002A3C]">
-                      {item.title}
+                      {item.title  } {console.log(item.title)}
                     </h3>
                     <p className="text-[#375E6C] mt-1">{item.description}</p>
                   </div>

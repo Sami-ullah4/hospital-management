@@ -18,7 +18,7 @@ export const  Main = () => {
 
   return (
     <>
-      <section className="w-[85%] m-auto py-[55px]">
+      <section className="w-[80%] m-auto py-[55px]">
         <div className="flex flex-col gap-[15px]">
           <div className="w-[181px] bg-white h-[30px] rounded-full flex justify-between   items-center ">
             <div>

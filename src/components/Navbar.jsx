@@ -16,17 +16,14 @@ const Navbar = () => {
   const location = useLocation();
   const cardRef = useRef(null);
 
-  // Toggle the visibility of the profile card
   const handelProfileCard = () => {
-    setCardShow((prev) => !prev); // This will toggle the card visibility
+    setCardShow((prev) => !prev); 
   };
 
-  // Close on route change
   useEffect(() => {
-    setCardShow(false); // Close the card if the route changes
+    setCardShow(false); 
   }, [location]);
 
-  // Close the card on click outside or scroll
   useEffect(() => {
     const handleClickOrScroll = (event) => {
       if (cardRef.current && !cardRef.current.contains(event.target)) {
@@ -34,14 +31,17 @@ const Navbar = () => {
       }
     };
 
-    document.addEventListener("mousedown", handleClickOrScroll);
     window.addEventListener("scroll", handleClickOrScroll);
 
     return () => {
-      document.removeEventListener("mousedown", handleClickOrScroll);
       window.removeEventListener("scroll", handleClickOrScroll);
     };
   }, []);
+
+  const handleMenu = ()=>{
+setCardShow((prev) => !prev)
+    console.log('first')
+  }
 
   return (
     <nav className="shadow-md bg-white">
@@ -58,8 +58,10 @@ const Navbar = () => {
         </div>
 
         {/* Mobile Menu Icon */}
-        <div className="flex items-center justify-center w-[24px] h-[24px] lg:hidden">
-          <IoMenu />
+        <div className="cursor-pointer flex items-center justify-center w-[24px] h-[24px] lg:hidden">
+          <IoMenu   
+          
+          onClick={handleMenu}/>
         </div>
 
         {/* Search input - Only on large screens */}
@@ -106,12 +108,14 @@ const Navbar = () => {
             </div>
           </div>
 
-          {/* Dropdown card */}
-          {cardShow && (
+       
+        </div>
+           {/* Dropdown card */}
+           {cardShow && (
             <div
               ref={cardRef}
-              className="bg-white absolute top-[9.5%] left-[85%] w-[248px] border border-[#D6E0E4] rounded-md shadow-md z-50"
-            >
+              className="fixed right-4 top-[60px] lg:top-[72px] w-[248px] border border-[#D6E0E4] rounded-md shadow-md bg-white z-50"
+              >
               <div className="p-3 flex flex-col gap-4">
                 <div>
                   <h1 className="text-[15px] text-[#002A3C] font-[600] leading-[130%]">
@@ -160,7 +164,6 @@ const Navbar = () => {
               </div>
             </div>
           )}
-        </div>
       </div>
     </nav>
   );

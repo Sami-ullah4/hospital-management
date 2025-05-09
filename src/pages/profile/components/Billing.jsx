@@ -6,14 +6,14 @@ const Billing = () => {
   return (
     <>
 
-        <div className="flex flex-col gap-7 w-full lg:w-[70%] lg:m-auto p-1 my-1">
-          <h1 className="font-[600] text-[32px] leading-[130%] text-[#002A3C]">
+<div className=" flex flex-col  gap-7 w-full lg:w-[70%] px-6 lg:px-3 m-auto py-6">
+<h1 className="font-[600] text-[32px] leading-[130%] text-[#002A3C]">
             Get full access to all features
           </h1>
 
-          <div className="flex gap-4 flex-wrap">
+          <div className="flex gap-4 lg:m-4 flex-wrap">
             {/* Free Plan Card */}
-            <div className="flex m-auto lg:m-0 flex-col max-w-[360px] p-7 gap-6 rounded-[16px] border border-[#D6E0E4]">
+            <div className="flex m-auto lg:m-0 flex-col max-w-[360px] lg:max-w-[380px] p-7 gap-6 rounded-[16px] border border-[#D6E0E4]">
               <div className="gap-1 flex flex-col">
                 <div className="flex justify-between items-center">
                   <h1 className="font-[600] text-[24px] leading-[130%] text-[#002A3C]">
@@ -32,7 +32,7 @@ const Billing = () => {
                 Free
               </h1>
               
-              <button className="bg-[#71C0E4] font-[500] text-[18px] leading-[100%] text-white rounded-full p-3 w-full flex justify-center">
+              <button className="bg-[#71C0E4] lg:w-[312px] font-[500] text-[18px] leading-[100%] text-white rounded-full p-3 w-full flex justify-center">
                 Selected plan
               </button>
 
@@ -59,7 +59,7 @@ const Billing = () => {
             </div>
 
             {/* Premium Plan Card */}
-            <div className="flex flex-col max-w-[360px] p-7 gap-6 rounded-[16px] border-1 m-auto lg:m-0 border-[#D6E0E4] bg-[#ffffff]">
+            <div className="flex flex-col max-w-[360px] p-7 lg:max-w-[380px] gap-6 rounded-[16px] border-1 m-auto lg:m-0 border-[#D6E0E4] bg-[#ffffff]">
               <div className="gap-1 flex flex-col">
                 <div className="flex justify-between items-center">
                   <h1 className="font-[600] text-[24px] leading-[130%] text-[#002A3C]">
@@ -79,7 +79,7 @@ const Billing = () => {
                 <p className="text-[#375E6C] font-[400] text-[12px] leading-[130%] mt-1">per month,<br /> billed yearly</p>
               </div>
 
-              <button className="bg-[#43B3E5] font-[500] text-[18px] leading-[100%] text-white rounded-full p-3 w-full flex justify-center hover:bg-[#3699C3] transition">
+              <button className="bg-[#132D5E] lg:w-[312px] font-[500] text-[18px] leading-[100%] text-white rounded-full p-3 w-full flex justify-center hover:bg-[#3699C3] transition">
                 Upgrade Now
               </button>
 

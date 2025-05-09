@@ -114,14 +114,14 @@ const Login = () => {
           <img
             src={cover}
             alt="cover image"
-            className="w-full h-full object-cover"
+            className="w-full h-[100vh] object-cover"
           />
           <img
             src={gradient}
             alt="gradient"
             className="absolute top-0 left-0 w-full h-full object-cover z-10 pointer-events-none"
           />
-          <h1 className="absolute bottom-10 left-1/2 transform -translate-x-1/2 text-white text-center font-[600] text-[40px] leading-[130%] z-20 px-4 lg:max-w-[100%] xl:max-w-[50%]">
+          <h1 className="max-w-[581px] absolute bottom-10 left-1/2 transform -translate-x-1/2 text-white text-center font-[600] text-[40px] leading-[130%] z-20 px-4 lg:max-w-[100%] xl:max-w-[50%]">
             Because every decision starts with the right information.
           </h1>
         </div>
