@@ -36,7 +36,7 @@ const Notification = () => {
   return (
     <>
       {/* Main content */}
-      <div className="flex flex-col gap-7 w-full lg:w-[70%] lg:m-auto py-6 my-1">
+      <div className=" flex flex-col  gap-7 w-full lg:w-[70%] px-6 lg:px-3 m-auto py-6">
         <h1 className="font-[600] text-[32px] leading-[130%] text-[#002A3C]">
           Notification Settings
         </h1>

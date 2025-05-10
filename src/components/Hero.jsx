@@ -3,19 +3,29 @@ import Bbutton from "./Bbutton";
 import { TbFilter } from "react-icons/tb";
 import { RiArrowDropDownLine } from "react-icons/ri";
 import { Link, useLocation } from "react-router-dom";
+import { cardData } from "./dummyData";
+import { BiCog } from "react-icons/bi";
 
-const Hero = () => {
+const Hero = ({ resiveData }) => {
   const [cardShow, setCardShow] = useState(false);
+  const [active, setActive] = useState("");
   const location = useLocation();
   const CardRef = useRef(null);
-  const buttonRef = useRef(null); 
-  
+  const buttonRef = useRef(null);
 
+  // //////
+  const handleMostRecent = (item) => {
+    setActive(item);
+    const mostRecent = cardData.filter((card) => card.category.includes(item));
+    resiveData(mostRecent);
+  };
+
+  //////
 
   useEffect(() => {
     setCardShow(false);
   }, [location]);
-  
+
   const handleCard = () => {
     setCardShow((prev) => !prev);
   };
@@ -23,20 +33,21 @@ const Hero = () => {
   useEffect(() => {
     const handleClickOutside = (e) => {
       if (
-        CardRef.current && !CardRef.current.contains(e.target) &&
+        CardRef.current &&
+        !CardRef.current.contains(e.target) &&
         buttonRef.current &&
         !buttonRef.current.contains(e.target)
       ) {
         setCardShow(false);
       }
     };
-  
+
     document.addEventListener("mousedown", handleClickOutside);
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
   }, []);
-  
+
   return (
     <>
       <section className="bg-[#F8F9FC]">
@@ -84,8 +95,7 @@ const Hero = () => {
             </div>
             <div className="relative inline-block">
               <button
-                ref={buttonRef} // 👈 here
-
+                ref={buttonRef}
                 onClick={handleCard}
                 className="w-[150px] sm:w-[168px] lg:w-[231px] h-[48px] border border-[#AFC1C9] rounded-[12px] bg-[#F8F9FC] flex justify-center items-center gap-9 flex-row-reverse"
               >
@@ -97,34 +107,32 @@ const Hero = () => {
                 <span className="block lg:hidden">Sort by:</span>
                 <span className="hidden lg:block">Sort by: Most Recent</span>
               </button>
-
               {cardShow && (
                 <div
                   ref={CardRef}
-                  className="absolute  top-full left-[-12px] mt-2 bg-[#F8F9FC] z-10 w-[248px] border border-[#D6E0E4] rounded-md shadow-md"
+                  className="w-[150px] sm:w-[168px] lg:w-[231px] absolute  top-[90%] left-[0] mt-2 bg-[#F8F9FC] z-10  border border-[#D6E0E4] rounded-md shadow-md"
                 >
                   <ul className="flex flex-col gap-3 text-start p-2">
-                    <li className="font-[500] text-[16px] leading-[100%] text-black">
-                      Most Recent
-                    </li>
-                    <li className="font-[500] text-[16px] leading-[100%] text-black">
-                      Most Relevant
-                    </li>
-                    <li className="font-[500] text-[16px] leading-[100%] text-black">
-                      Most Popular
-                    </li>
-                    <li className="font-[500] text-[16px] leading-[100%] text-black">
-                      AI-Powered Insights
-                    </li>
-                    <li className="font-[500] text-[16px] leading-[100%] text-black">
-                      By Source
-                    </li>
-                    <li className="font-[500] text-[16px] leading-[100%] text-black">
-                      By Specialty
-                    </li>
-                    <li className="font-[500] text-[16px] leading-[100%] text-black">
-                      Saved for Later
-                    </li>
+                    {[
+                      "Most Recent",
+                      "Most Relevant",
+                      "Most Popular",
+                      "AI-Powered Insights",
+                      "By Source",
+                      "Saved for Later",
+                    ].map((item) => (
+                      <li
+                        key={item}
+                        onClick={() => handleMostRecent(item)}
+                        className={`cursor-pointer font-[500] text-[16px] leading-[100%] ${
+                          active === item
+                            ? "text-blue-600 font-bold"
+                            : "text-black"
+                        }`}
+                      >
+                        {item}
+                      </li>
+                    ))}
                   </ul>
                 </div>
               )}

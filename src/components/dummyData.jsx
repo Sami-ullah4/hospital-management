@@ -35,6 +35,7 @@ export const cardData = [
     heading2: "The Recent Breakthrough",
     heading3: "Implications for the Future of Cancer Treatment",
     heading4: "What This Means for Patients",
+    category: ["AI-Powered Insights", "Most Popular"]
   },
   {
     id: 1,
@@ -49,6 +50,7 @@ export const cardData = [
     heading2: "New Discoveries in Cardiogenetics",
     heading3: "Impact on Diagnosis and Prevention",
     heading4: "Future of Heart Health Research",
+    category: ["Most Relevant", "By Specialty"]
   },
   {
     id: 2,
@@ -63,6 +65,7 @@ export const cardData = [
     heading2: "Study Findings Explained",
     heading3: "How It Affects Diabetic Patients",
     heading4: "Recommendations for Physicians",
+    category: ["Most Recent", "By Source"]
   },
   {
     id: 3,
@@ -77,6 +80,7 @@ export const cardData = [
     heading2: "Technological Breakthroughs",
     heading3: "Accuracy and Efficiency Gains",
     heading4: "AI's Future in Radiology",
+    category: ["AI-Powered Insights", "By Specialty"]
   },
   {
     id: 4,
@@ -91,6 +95,7 @@ export const cardData = [
     heading2: "Clinical Trials & Results",
     heading3: "How Patients Benefit",
     heading4: "What Comes Next",
+    category: ["Most Popular", "By Specialty"]
   },
   {
     id: 5,
@@ -105,6 +110,7 @@ export const cardData = [
     heading2: "Link Between Sleep and Alzheimer's",
     heading3: "Prevention Through Better Sleep",
     heading4: "Advice for Clinicians and Patients",
+    category: ["Most Relevant", "Saved for Later"]
   },
   {
     id: 6,
@@ -119,6 +125,7 @@ export const cardData = [
     heading2: "FDA Approval Insights",
     heading3: "Benefits for Public Health",
     heading4: "Distribution and Usage",
+    category: ["Most Recent", "By Source"]
   },
   {
     id: 7,
@@ -133,6 +140,7 @@ export const cardData = [
     heading2: "FDA Approval Insights",
     heading3: "Benefits for Public Health",
     heading4: "Distribution and Usage",
+    category: ["Saved for Later", "Most Popular"]
   },
   {
     id: 8,
@@ -147,6 +155,7 @@ export const cardData = [
     heading2: "Updated Treatment Protocols",
     heading3: "Benefits and Risks",
     heading4: "What Doctors Should Know",
+    category: ["Most Relevant", "By Specialty"]
   },
   {
     id: 9,
@@ -161,6 +170,7 @@ export const cardData = [
     heading2: "Virtual Care Trends",
     heading3: "Patient Access and Equity",
     heading4: "Where Telehealth is Headed",
+    category: ["AI-Powered Insights", "Most Popular"]
   },
   {
     id: 10,
@@ -175,6 +185,7 @@ export const cardData = [
     heading2: "Foods That Fight Inflammation",
     heading3: "Clinical Evidence & Studies",
     heading4: "Practical Guidelines for Diet",
+    category: ["By Specialty", "Saved for Later"]
   },
   {
     id: 11,
@@ -189,6 +200,10 @@ export const cardData = [
     heading2: "Recent Clinical Trials",
     heading3: "Patient Case Studies",
     heading4: "Long-Term Health Outcomes",
-  },
+    category: ["Most Recent", "By Source"]
+  }
 ];
+
+
+
 

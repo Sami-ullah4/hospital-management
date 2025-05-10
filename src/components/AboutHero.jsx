@@ -12,20 +12,23 @@ const DownImage = () => {
           Why We Exist
         </h1>
         <p className="font-normal h-[135px] w-[345px] text-[18px] mt-[12px] leading-[150%] text-[#375E6C]">
-          At Ygeian Focus, we simplify how medical professionals consume news. By aggregating the latest articles and personalizing them to your specialty, we save you time and keep you informed.
+          At Ygeian Focus, we simplify how medical professionals consume news.
+          By aggregating the latest articles and personalizing them to your
+          specialty, we save you time and keep you informed.
         </p>
       </div>
 
       {/* Image Part */}
       <div className="mt-3">
-        <img src={about} alt="Patient and Doctor" className="w-[345px] h-[252px] object-cover  lg:w-[552px] lg:h-[463px] rounded-[16px]" />
+        <img
+          src={about}
+          alt="Patient and Doctor"
+          className="w-[345px] h-[252px] object-cover  lg:w-[552px] lg:h-[463px] rounded-[16px]"
+        />
       </div>
     </section>
   );
 };
-
-//--Down Down --//
-
 
 // --- AboutHero Component ---
 const AboutHero = () => {
@@ -51,13 +54,12 @@ const AboutHero = () => {
 
           {/* Paragraph */}
           <p className="text-[18px] sm:text-[20px] font-medium leading-[150%] text-[#EDF1F3] mb-6">
-            Discover a personalized way to stay informed, powered by AI and tailored to your expertise.
+            Discover a personalized way to stay informed, powered by AI and
+            tailored to your expertise.
           </p>
 
           {/* Button */}
-          <button
-            className="w-full max-w-[290px] lg:w-[180px] h-[48px] flex justify-center items-center rounded-full bg-[#43B3E5] text-white hover:bg-[#3aa3d1] transition-colors"
-          >
+          <button className="w-full max-w-[290px] lg:w-[180px] h-[48px] flex justify-center items-center rounded-full bg-[#43B3E5] text-white hover:bg-[#3aa3d1] transition-colors">
             Get Started Today
           </button>
         </div>
@@ -65,7 +67,6 @@ const AboutHero = () => {
         {/* Down Image Section */}
       </section>
       <DownImage />
-
     </>
   );
 };
